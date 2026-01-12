@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars List</title>
+</head>
+<body>
+    <h1>All Cars</h1>
+    <ul>
+        <% cars.forEach(function(car) { %>
+            <li><%= car.make %> <%= car.model %> (<%= car.year %>)</li>
+            <lir><a href="/cars/<%= car._id %>/edit">Edit</a>
+        <% }); %>
+    </ul>
+    <a href="/cars-create">Create New Car</a>
+</body>
+</html>
