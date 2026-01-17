@@ -9,8 +9,8 @@
     <h1>All Cars</h1>
     <ul>
         <% cars.forEach(function(car) { %>
-            <li><%= car.make %> <%= car.model %> (<%= car.year %>)</li>
-            <lir><a href="/cars/<%= car._id %>/edit">Edit</a>
+            <a href="/cars/<%= car._id %>"><li><%= car.make %> <%= car.model %> (<%= car.year %>)</li></a>
+               
         <% }); %>
     </ul>
     <a href="/cars-create">Create New Car</a>

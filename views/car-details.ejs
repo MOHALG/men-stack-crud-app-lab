@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Car Details</h1>
+    <p>Make: <%= car.make %></p>
+    <p>Model: <%= car.model %></p>
+    <p>Year: <%= car.year %></p>
+    <a href="/cars/<%= car._id %>/edit">Edit Car</a>
+    <a href="/cars/<%= car._id %>/delete">Delete Car</a>
+    <a href="/cars">Back to Cars List</a>
+</body>
+</html>
