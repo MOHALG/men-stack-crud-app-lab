@@ -7,12 +7,12 @@ const morgan = require('morgan')
 const carsRouter = require('./controllers/cars.routes')
 
 // Middleware
-app.use('/cars', carsRouter) // all routes in carsRouter will be prefixed with /cars
 app.set('view engine', 'ejs')
-
 app.use(express.static('public')) // my app will serve all static files from public folder
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); // Must be before routes
 app.use(morgan('dev'))
+
+app.use('/cars', carsRouter) // all routes in carsRouter will be prefixed with /cars
 
 
 
